@@ -222,8 +222,15 @@
         <div class="container mx-auto p-20">
           <div class="grid grid-cols-2 gap-x-8">
             <div>
+              <div class="bg-green-400 py-3 px-8 rounded-md drop-shadow hidden" id="submitSuccessMessage">
+                <strong>Отправлено!</strong> Ваше сообщение успешно отправлено.
+              </div>
+
+              <div class="bg-red-400 py-3 px-8 rounded-md drop-shadow text-white hidden"  id="submitErrorMessage">
+                <strong>Ошибка!</strong> Возникла ошибка при отправке сообщения.
+              </div>
               <p class="mb-2 font-bold">Напишите нам</p>
-              <form accept-charset="utf-8" onsubmit="submitForm" name="message" id="form-message" class="mb-10">
+              <form accept-charset="utf-8" id="form" class="mb-10">
                 <div class="mb-4 grid grid-flow-col grid-rows-1 gap-4">
                   <div>
                     <label for="name" class="mb-1 block">Имя</label>
