@@ -22,3 +22,9 @@ function submitForm(e: SubmitEvent) {
 }
 
 form.addEventListener("submit", submitForm);
+
+document.addEventListener("DOMContentLoaded", () => {
+  const currentYear = new Date().getFullYear();
+
+  $("#year").text(currentYear);
+});
