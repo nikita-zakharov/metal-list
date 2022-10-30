@@ -33,17 +33,11 @@ function submitForm(e: SubmitEvent) {
   if (!isValid) return;
 
   const formData = new FormData(form);
+
   let xhr = new XMLHttpRequest();
 
-  const payload = JSON.stringify({
-    name: formData.get("name"),
-    email: formData.get("email"),
-    message: formData.get("message"),
-  });
-
   xhr.open("POST", "send.php");
-  xhr.setRequestHeader("Content-type", "application/json; charset=utf-8");
-  xhr.send(payload);
+  xhr.send(formData);
 
   xhr.onload = () => showSuccess();
   xhr.onerror = () => showError();
