@@ -6,6 +6,7 @@ $message = $_POST['message'];
 $text = "От $name, $email. \r\n \r\n $message";
 
 if (!$email || !$name) {
+    header("Location: /");
     return;
 }
 
