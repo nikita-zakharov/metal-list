@@ -1,7 +1,10 @@
 import $ from "jquery";
+import "./link-scroll";
 import "./style.css";
 
 const form = document.getElementById("form") as HTMLFormElement;
+
+form.addEventListener("submit", submitForm);
 
 function submitForm(e: SubmitEvent) {
   e.preventDefault();
@@ -20,8 +23,6 @@ function submitForm(e: SubmitEvent) {
     },
   });
 }
-
-form.addEventListener("submit", submitForm);
 
 document.addEventListener("DOMContentLoaded", () => {
   const currentYear = new Date().getFullYear();
