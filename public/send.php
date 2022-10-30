@@ -5,5 +5,9 @@ $message = $_POST['message'];
 
 $text = "От $name, $email. \r\n \r\n $message";
 
+if (!$email || !$name) {
+    return;
+}
+
 mail('nikzhrv@yandex.ru', 'Заявка с сайта металл-лист-воронеж.рф', $text);
 ?>
