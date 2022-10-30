@@ -14,34 +14,34 @@
     />
   </head>
   <body>
-    <div id="app">
+    <div id="app" class="text-sm md:text-lg">
       <header class="fixed z-10 w-full border-b border-black bg-neutral-900">
         <nav class="container mx-auto">
           <ul class="flex items-center">
-            <li>
-              <a href="#" class="inline-block p-3"
-                ><span class="text-gray-300 hover:text-white">Металл лист Воронеж</span></a
-              >
+            <li class="hidden md:block">
+              <button class="inline-block p-3" data-scroll-link="app">
+                <span class="text-gray-300 hover:text-white">Металл лист Воронеж</span>
+              </button>
+            </li>
+            <li class="hidden md:block">
+              <button class="inline-block p-3" data-scroll-link="app">
+                <span class="text-gray-300 hover:text-white">Начало</span>
+              </button>
             </li>
             <li>
-              <a href="#" class="inline-block p-3"
-                ><span class="text-gray-300 hover:text-white">Начало</span></a
-              >
+              <button class="inline-block p-3" data-scroll-link="products">
+                <span class="text-gray-300 hover:text-white">Продукция</span>
+              </button>
             </li>
             <li>
-              <a href="#services" class="inline-block p-3"
-                ><span class="text-gray-300 hover:text-white">Продукция</span></a
-              >
+              <button class="inline-block p-3" data-scroll-link="pricing">
+                <span class="text-gray-300 hover:text-white">Цены</span>
+              </button>
             </li>
             <li>
-              <a href="#pricing" class="inline-block p-3"
-                ><span class="text-gray-300 hover:text-white">Цена</span></a
-              >
-            </li>
-            <li>
-              <a href="#contact" class="inline-block p-3"
-                ><span class="text-gray-300 hover:text-white">Контактная информация</span></a
-              >
+              <button class="inline-block p-3" data-scroll-link="contacts">
+                <span class="text-gray-300 hover:text-white">Контакты</span>
+              </button>
             </li>
             <li>
               <a href="tel:+79529506976" class="inline-block p-3">
@@ -52,10 +52,10 @@
         </nav>
       </header>
       <div class="bg-neutral-800">
-        <div class="container mx-auto py-40 px-10">
-          <div class="grid grid-cols-2 gap-4">
+        <div class="container mx-auto pt-24 pb-10 md:pt-24 md:pb-12 px-4 md:px-10">
+          <div class="md:grid md:grid-cols-2 md:gap-4">
             <div>
-              <h1 class="mb-4 text-6xl font-black text-green-600">
+              <h1 class="mb-4 text-4xl md:text-6xl font-black text-green-600">
                 Оцинкованный лист
                 <span class="font-light text-white">в Воронеже</span>
               </h1>
@@ -70,15 +70,16 @@
                   Работаем по всей России с 2012 года
                 </p>
                 <button
+                        data-scroll-link="contacts"
                   class="mb-4 block rounded-md bg-green-500 px-4 py-2 text-lg text-white"
                 >
-                  <a href="#pricing">Подробнее</a>
+                  Оставить заявку
                 </button>
               </div>
             </div>
             <div>
               <img
-                class="media-object"
+                class="media-object hidden md:inline"
                 src="/cink_list.png"
                 alt="Оцинкованный лист в рулоне"
               />
@@ -93,11 +94,11 @@
           </div>
         </div>
       </div>
-      <div id="services" class="bg-white">
+      <div id="products" class="bg-white">
         <div class="container mx-auto py-20">
           <div class="mb-10">
-            <div class="mb-4 text-center">
-              <p class="mb-1 text-lg">
+            <div class="mb-4 text-center px-2 md:px-0">
+              <p class="mb-1 text-lg ">
                 Прокат оцинкованный в рулонах и листах, штрипс (лента).
                 Производство НЛМК г.Липецк
               </p>
@@ -130,7 +131,7 @@
             </table>
           </div>
           <div>
-            <div class="mb-4 text-center">
+            <div class="mb-4 text-center px-2 md:px-0">
               <p class="mb-1 text-lg">
                 Прокат оцинкованный в рулонах и листах, штрипс (лента).
                 Производство НЛМК г.Липецк
@@ -174,9 +175,9 @@
         </div>
       </div>
       <div id="pricing" class="bg-white">
-        <div class="container mx-auto py-20">
-          <div class="grid grid-cols-3 gap-4">
-            <div class="border text-center">
+        <div class="container mx-auto py-20 px-4">
+          <div class="md:grid sm:grid-cols-3 sm:gap-4">
+            <div class="border text-center md:mb-0 mb-4">
               <div class="bg-red-400 p-4 text-xl text-white">
                 Оцинкованный лист 0,5x1250х2500мм
               </div>
@@ -189,7 +190,7 @@
                 <div class="border-b p-2">Толщина: 0,5 мм</div>
               </div>
             </div>
-            <div class="border text-center">
+            <div class="border text-center md:mb-0 mb-4">
               <div class="bg-blue-600 p-4 text-xl text-white">
                 Оцинкованный лист 0,7x1250х2500мм
               </div>
@@ -218,9 +219,9 @@
           </div>
         </div>
       </div>
-      <div id="contact" class="bg-gray-100">
-        <div class="container mx-auto p-20">
-          <div class="grid grid-cols-2 gap-x-8">
+      <div id="contacts" class="bg-gray-100">
+        <div class="container mx-auto md:p-20 p-4">
+          <div class="md:grid md:grid-cols-2 md:gap-x-8">
             <div>
               <div class="bg-green-400 py-3 px-8 rounded-md drop-shadow hidden" id="submitSuccessMessage">
                 <strong>Отправлено!</strong> Ваше сообщение успешно отправлено.
@@ -274,7 +275,7 @@
                   </button>
                 </div>
               </form>
-              <div class="drop-shadow">
+              <div class="drop-shadow mb-8 md:mb-0">
                 <iframe
                   src="https://www.google.com/maps/d/embed?mid=1OyGbFn2oTktdK5UZIIVizFW2tnM&hl=ru&ehbc=2E312F"
                   width="100%"
@@ -307,13 +308,13 @@
                   </li>
                   <li>
                     <span class="font-bold">Телефон:</span>
-                    <a href="tel:84732406976">8 (473) 240 69 76</a>,
-                    <a href="tel:89529506976">+7 952 950 69 76</a>,
-                    <a href="tel:89531190232">+7 953 119 02 32</a>
+                    <a href="tel:84732406976" class="block text-blue-400 underline">8 (473) 240 69 76</a>
+                    <a href="tel:89529506976" class="block text-blue-400 underline">+7 952 950 69 76</a>
+                    <a href="tel:89531190232" class="block text-blue-400 underline">+7 953 119 02 32</a>
                   </li>
                   <li>
                     <span class="font-bold">Email:</span>
-                    <a href="mailto:ser.zah70@mail.ru">ser.zah70@mail.ru</a>
+                    <a href="mailto:ser.zah70@mail.ru" class="block text-blue-400 underline">ser.zah70@mail.ru</a>
                   </li>
                 </ul>
               </div>
