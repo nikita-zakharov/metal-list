@@ -1,5 +1,6 @@
-import "./request-form";
-import "./link-scroll";
+import "./scripts/request-form";
+import "./scripts/link-scroll";
+import { appendGoogleMap } from "./scripts/google-map";
 
 import "./style.css";
 
@@ -12,4 +13,5 @@ function setCurrentYear() {
 
 document.addEventListener("DOMContentLoaded", () => {
   setCurrentYear();
+  appendGoogleMap();
 });
